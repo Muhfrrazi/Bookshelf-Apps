@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+        <section class="row-1">
+            <section class="input_section">
+                <h2>Masukkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle" id="judul">Judul</label>
+                        <input id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit">Masukkan Buku ke rak </button>
+                </form>
+            </section>
+            <section class="search_section">
+                <h2>Cari Buku</h2>
+                <form id="searchBook">
+                    <label for="searchBookTitle">Judul</label>
+                    <input id="searchBookTitle" type="text">
+                    <button id="searchSubmit" type="submit">Cari</button>
+                </form>
+            </section>
+        </section>
+        <section class="row-2">
+            <section class="book_shelf">
+                <h2>Belum selesai dibaca</h2>
+                <div id="incompleteBookshelfList" class="book_list">
+                </div>
+            </section>
+        </section>
+        <section class="row-3">
+            <section class="book_shelf">
+                <h2>Selesai dibaca</h2>
+                <div id="completeBookshelfList" class="book_list">
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <h4>Copyright &copy Muhammad Fachrurrazi - 2022</h4>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dom.js"></script>
+    <script src="/assets/js/storage.js"></script>
+
+
+</body>
+
+</html>
